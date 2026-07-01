@@ -13,20 +13,20 @@ estructura pero con contenido, paleta (costera/marina) y confirmación propios.
 - **Frontend**: `index.html` (HTML/CSS/JS vanilla, un solo archivo, autocontenido).
 - **Sin backend**: no usa Supabase ni ninguna base de datos.
 - **Confirmación de asistencia**: botón de **WhatsApp** con mensaje pre-escrito.
-- **Assets**: artes costeros de la invitación (`portada.jpg`, `info.jpg`, `plan.jpg`,
-  `muelle.jpg`) + `Textura papel.png` (textura de las tarjetas). El resto de la decoración
+- **Assets**: artes costeros de la invitación (`portada.png`, `info.jpg`, `plan.jpg`,
+  `muelle.png`) + `Textura papel.png` (textura de las tarjetas). El resto de la decoración
   (sello de concha, olas) es SVG/CSS inline.
 
 ---
 
 ## 2. Secciones
 
-1. **Portada** (`portada.jpg`) · toca el sello de concha para abrir.
+1. **Portada** (`portada.png`) · toca el sello de concha para abrir.
 2. **Invitación principal** (`conjunto.png`) · arte completo (sobre + conchas + flores); primera imagen tras la animación.
 3. **Cuenta regresiva** · hacia el 8 de agosto 2026.
 4. **Nuestra historia** · timeline.
 5. **El plan del día** (`plan.jpg`) · 4:00 ceremonia · 6:00 cena · 8:00 fiesta · 11:00 fin.
-6. **Cómo llegar** (`muelle.jpg`) · Muelle Municipal 3:00 p.m. + lanchas a Punta de Palma, Maps/Waze.
+6. **Cómo llegar** (`muelle.png`) · Muelle Municipal 3:00 p.m. + lanchas a Punta de Palma, Maps/Waze.
 7. **Confirmación** · botón de WhatsApp.
 8. **Solo adultos**, **Dress code de playa**, **Regalos**, **FAQ**, **Cierre**.
 
@@ -79,10 +79,10 @@ Archivo estático — cualquier host sirve.
 ```
 boda-civil-valeria-apolo/
 ├── index.html          ← la invitación completa (texto, estilos, JS)
-├── portada.jpg         ← arte de portada (sello de concha)
+├── portada.png         ← arte de portada (sello de concha)
 ├── conjunto.png        ← arte completo (primera imagen tras abrir)
 ├── plan.jpg            ← "El Plan" (itinerario del día)
-├── muelle.jpg          ← punto de reunión / lanchas
+├── muelle.png          ← punto de reunión / lanchas
 ├── Textura papel.png   ← textura de papel para tarjetas
 ├── README.md           ← este documento
 └── .gitignore

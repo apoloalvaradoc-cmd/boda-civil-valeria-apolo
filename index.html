@@ -264,7 +264,7 @@ body.locked { overflow: hidden; }
 .cover-seal { width: 100%; height: 100%; filter: drop-shadow(0 6px 12px rgba(31,78,84,0.28)); }
 .cover-stage .cover-tap-label { position: relative; bottom: auto; left: auto; transform: none; }
 #cover.opening .cover-stage .cover-tap-label { opacity: 0; }
-.cover-art { width: min(78vw, 320px); max-height: 60vh; object-fit: contain; border-radius: 10px; box-shadow: 0 18px 46px rgba(31,78,84,0.22); display: block; }
+.cover-art { width: min(78vw, 320px); max-height: 60vh; object-fit: contain; display: block; filter: drop-shadow(0 14px 20px rgba(46,74,80,0.22)); }
 /* Imágenes de arte (info, plan, muelle) dentro de secciones */
 .art-figure { max-width: 440px; margin: 0 auto; }
 .art-figure.wide { max-width: 500px; }
@@ -1488,7 +1488,7 @@ footer { padding: 3rem 1.5rem 2rem; background: var(--wine); color: var(--cream)
 
   <!-- Portada costera · arte + sello de concha -->
   <div class="cover-stage">
-    <img class="cover-art" src="portada.jpg" alt="Acompáñanos en nuestra boda civil · Valeria & Apolo" draggable="false">
+    <img class="cover-art" src="portada.png" alt="Acompáñanos en nuestra boda civil · Valeria & Apolo" draggable="false">
 
     <!-- Sello de concha — keeps id #envelope so JS handler works -->
     <button id="envelope" class="cover-tap inflow" type="button" aria-label="Toca la concha para abrir la invitación">
@@ -1613,7 +1613,7 @@ footer { padding: 3rem 1.5rem 2rem; background: var(--wine); color: var(--cream)
         <div class="section-divider"></div>
       </div>
       <figure class="art-figure reveal" style="margin-bottom:1.8rem">
-        <img class="art-img" src="muelle.jpg" alt="8 de Agosto 2026 · 3:00 p.m. · Punto de reunión Muelle Municipal · Allí estarán unas lanchas esperando para que los lleve a Punta de Palma" draggable="false">
+        <img class="art-img plain" src="muelle.png" alt="8 de Agosto 2026 · 3:00 p.m. · Punto de reunión Muelle Municipal · Allí estarán unas lanchas esperando para que los lleve a Punta de Palma" draggable="false">
       </figure>
       <div class="location-card reveal">
         <div class="location-name">Muelle Municipal</div>
