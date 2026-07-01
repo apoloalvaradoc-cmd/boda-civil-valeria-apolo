@@ -22,7 +22,7 @@ estructura pero con contenido, paleta (costera/marina) y confirmación propios.
 ## 2. Secciones
 
 1. **Portada** (`portada.jpg`) · toca el sello de concha para abrir.
-2. **Invitación principal** (`info.jpg`) · nombres, boda civil, 8 ago 2026, Punta de Palma, 4:00 p.m.
+2. **Invitación principal** (`conjunto.jpg`) · arte completo (sobre + conchas + flores); primera imagen tras la animación.
 3. **Cuenta regresiva** · hacia el 8 de agosto 2026.
 4. **Nuestra historia** · timeline.
 5. **El plan del día** (`plan.jpg`) · 4:00 ceremonia · 6:00 cena · 8:00 fiesta · 11:00 fin.
@@ -80,7 +80,7 @@ Archivo estático — cualquier host sirve.
 boda-civil-valeria-apolo/
 ├── index.html          ← la invitación completa (texto, estilos, JS)
 ├── portada.jpg         ← arte de portada (sello de concha)
-├── info.jpg            ← tarjeta principal con los datos del evento
+├── conjunto.jpg        ← arte completo (primera imagen tras abrir)
 ├── plan.jpg            ← "El Plan" (itinerario del día)
 ├── muelle.jpg          ← punto de reunión / lanchas
 ├── Textura papel.png   ← textura de papel para tarjetas
