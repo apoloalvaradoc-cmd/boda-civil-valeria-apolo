@@ -262,6 +262,11 @@ body.locked { overflow: hidden; }
 .cover-seal { width: 100%; height: 100%; filter: drop-shadow(0 6px 12px rgba(31,78,84,0.28)); }
 .cover-stage .cover-tap-label { position: relative; bottom: auto; left: auto; transform: none; }
 #cover.opening .cover-stage .cover-tap-label { opacity: 0; }
+.cover-art { width: min(78vw, 320px); max-height: 60vh; object-fit: contain; border-radius: 10px; box-shadow: 0 18px 46px rgba(31,78,84,0.22); display: block; }
+/* Imágenes de arte (info, plan, muelle) dentro de secciones */
+.art-figure { max-width: 440px; margin: 0 auto; }
+.art-img { width: 100%; border-radius: 12px; box-shadow: 0 16px 40px -14px rgba(31,78,84,0.35); border: 1px solid rgba(154,126,76,0.22); display: block; }
+.art-caption { text-align: center; font-family: var(--font-serif); font-style: italic; color: var(--muted); font-size: 0.9rem; margin-top: 0.9rem; }
 
 /* ---------- atmosphere: floating gold motes (sun-flecks on paper) ---------- */
 .dust-motes { position: absolute; inset: 0; pointer-events: none; z-index: 3; overflow: hidden; mix-blend-mode: multiply; }
@@ -1476,19 +1481,9 @@ footer { padding: 3rem 1.5rem 2rem; background: var(--wine); color: var(--cream)
   <!-- Unifying paper grain overlay -->
   <div class="cover-grain" aria-hidden="true"></div>
 
-  <!-- Portada costera · tarjeta + sello de concha -->
+  <!-- Portada costera · arte + sello de concha -->
   <div class="cover-stage">
-    <div class="cover-frame">
-      <svg class="cover-shell-top" width="52" height="34" viewBox="0 0 52 34" fill="none" aria-hidden="true">
-        <path d="M26 32 C10 26 3 12 8 4 C11 12 14 12 15 3 C18 12 21 12 22 2 C24 12 28 12 30 2 C31 12 34 12 37 3 C38 12 41 12 44 4 C49 12 42 26 26 32 Z" fill="currentColor" opacity="0.45"/>
-      </svg>
-      <div class="cover-eyebrow2">Acompáñanos en nuestra</div>
-      <h1 class="cover-names2">Valeria<span class="amp">&amp;</span>Apolo</h1>
-      <div class="cover-sub2">Boda Civil</div>
-      <div class="cover-divider2"></div>
-      <div class="cover-date2">8 de Agosto 2026 · 4:00 p.m.</div>
-      <div class="cover-place2">PUNTA DE PALMA, IZABAL</div>
-    </div>
+    <img class="cover-art" src="portada.jpg" alt="Acompáñanos en nuestra boda civil · Valeria & Apolo" draggable="false">
 
     <!-- Sello de concha — keeps id #envelope so JS handler works -->
     <button id="envelope" class="cover-tap inflow" type="button" aria-label="Toca la concha para abrir la invitación">
@@ -1524,7 +1519,7 @@ footer { padding: 3rem 1.5rem 2rem; background: var(--wine); color: var(--cream)
 </nav>
 <div id="nav-menu" aria-hidden="true">
   <a href="#inicio" data-nav>Inicio</a>
-  <a href="#evento" data-nav>Evento</a>
+  <a href="#itinerario" data-nav>El plan</a>
   <a href="#rsvp" data-nav>Confirmar asistencia</a>
   <a href="#location" data-nav>Ubicación</a>
   <a href="#dresscode" data-nav>Dress code</a>
@@ -1533,45 +1528,14 @@ footer { padding: 3rem 1.5rem 2rem; background: var(--wine); color: var(--cream)
 
 <!-- ================= INVITATION ================= -->
 <main id="invitation" aria-hidden="true">
-  <!-- 1. INTRO ART · primer contenido tras la animación del cover -->
+  <!-- 1. INVITACIÓN PRINCIPAL · arte con los datos del evento -->
   <section class="intro-art" id="inicio">
-    <div class="intro-welcome">
-      <svg class="intro-shell" width="64" height="42" viewBox="0 0 52 34" fill="none" aria-hidden="true">
-        <path d="M26 32 C10 26 3 12 8 4 C11 12 14 12 15 3 C18 12 21 12 22 2 C24 12 28 12 30 2 C31 12 34 12 37 3 C38 12 41 12 44 4 C49 12 42 26 26 32 Z" fill="currentColor" opacity="0.45"/>
-        <g stroke="currentColor" stroke-width="0.8" opacity="0.5"><path d="M26 31 L15 6"/><path d="M26 31 L21 4"/><path d="M26 31 L26 3"/><path d="M26 31 L31 4"/><path d="M26 31 L37 6"/></g>
-      </svg>
-      <div class="intro-welcome-eyebrow">Acompáñanos en nuestra boda civil</div>
-      <h2 class="intro-welcome-names">Valeria <span class="amp">&amp;</span> Apolo</h2>
-      <p class="intro-welcome-text">Frente al mar, con los pies en la arena, damos el primer gran paso de nuestra vida juntos. Nos encantaría que seas parte de este día tan especial en Punta de Palma.</p>
-    </div>
-  </section>
-
-  <!-- 2. INFORMACIÓN DEL EVENTO -->
-  <section class="hero" id="evento">
-    <div class="hero-card reveal">
-      <div class="hero-eyebrow">Información del evento</div>
-      <div class="hero-photo-wrap">
-        <svg viewBox="0 0 100 100" width="100%" height="100%" aria-hidden="true">
-          <rect width="100" height="100" fill="#DCE9E6"/>
-          <path d="M0 70 Q25 60 50 70 T100 70 V100 H0 Z" fill="#C7DAD3"/>
-          <path d="M0 80 Q25 72 50 80 T100 80 V100 H0 Z" fill="#B3CCC4"/>
-          <g transform="translate(50 58)">
-            <path d="M0 0 C-22 -6 -30 -25 -20 -30 C-16 -20 -12 -20 -10 -31 C-6 -19 -2 -19 0 -31 C2 -19 6 -19 10 -31 C12 -20 16 -20 20 -30 C30 -25 22 -6 0 0 Z" fill="#F2ECDD" stroke="#D9CBA6" stroke-width="1"/>
-            <g stroke="#CBB98C" stroke-width="0.9" opacity="0.7" fill="none"><path d="M0 -2 L-15 -26"/><path d="M0 -2 L-7 -29"/><path d="M0 -2 L0 -30"/><path d="M0 -2 L7 -29"/><path d="M0 -2 L15 -26"/></g>
-          </g>
-        </svg>
+    <figure class="art-figure reveal">
+      <img class="art-img" src="info.jpg" alt="Valeria & Apolo · Boda Civil · 8 de Agosto 2026 · Punta de Palma, Izabal · 4:00 p.m. · Acompáñanos a celebrar este momento especial frente al mar" draggable="false">
+      <div style="text-align:center;margin-top:1.4rem">
+        <button class="hero-rsvp-btn" onclick="scrollTo('rsvp')">Confirmar asistencia</button>
       </div>
-      <h1 class="hero-names">Valeria</h1>
-      <div class="hero-amp"><span>&amp;</span></div>
-      <h1 class="hero-names">Apolo</h1>
-      <div class="hero-date">
-        <div class="day">08</div>
-        <div class="meta"><strong>Sábado</strong>Agosto<br>2026</div>
-      </div>
-      <div class="hero-venue">Punta de Palma, Izabal · 4:00 p.m.</div>
-      <p class="hero-intro-text">Celebramos nuestra boda civil a la orilla del mar. Con todo el cariño te invitamos a acompañarnos en este día tan importante para nosotros.</p>
-      <button class="hero-rsvp-btn" onclick="scrollTo('rsvp')">Confirmar asistencia</button>
-    </div>
+    </figure>
   </section>
 
   <!-- COUNTDOWN -->
@@ -1624,41 +1588,13 @@ footer { padding: 3rem 1.5rem 2rem; background: var(--wine); color: var(--cream)
     </div>
   </section>
 
-  <!-- ITINERARIO · el plan del día -->
+  <!-- ITINERARIO · el plan del día (arte) -->
   <section class="itinerario-art" id="itinerario">
     <div class="itinerario-inner">
-      <div class="section-title-block reveal" style="text-align:center">
-        <div class="section-eyebrow">El plan del día</div>
-        <h2 class="section-title">Cómo será la celebración</h2>
-        <div class="section-divider"></div>
-      </div>
-      <div class="itin-list reveal">
-        <div class="itin-item">
-          <div class="itin-time">3:00 pm</div>
-          <svg class="itin-shell" viewBox="0 0 52 34" fill="currentColor" aria-hidden="true"><path d="M26 32 C10 26 3 12 8 4 C11 12 14 12 15 3 C18 12 21 12 22 2 C24 12 28 12 30 2 C31 12 34 12 37 3 C38 12 41 12 44 4 C49 12 42 26 26 32 Z"/></svg>
-          <div class="itin-body"><div class="itin-title">Punto de reunión</div><div class="itin-desc">Nos encontramos en el Muelle Municipal para abordar las lanchas.</div></div>
-        </div>
-        <div class="itin-item">
-          <div class="itin-time">3:30 pm</div>
-          <svg class="itin-shell" viewBox="0 0 52 34" fill="currentColor" aria-hidden="true"><path d="M26 32 C10 26 3 12 8 4 C11 12 14 12 15 3 C18 12 21 12 22 2 C24 12 28 12 30 2 C31 12 34 12 37 3 C38 12 41 12 44 4 C49 12 42 26 26 32 Z"/></svg>
-          <div class="itin-body"><div class="itin-title">Traslado en lancha</div><div class="itin-desc">Zarpamos juntos rumbo a Punta de Palma.</div></div>
-        </div>
-        <div class="itin-item">
-          <div class="itin-time">4:00 pm</div>
-          <svg class="itin-shell" viewBox="0 0 52 34" fill="currentColor" aria-hidden="true"><path d="M26 32 C10 26 3 12 8 4 C11 12 14 12 15 3 C18 12 21 12 22 2 C24 12 28 12 30 2 C31 12 34 12 37 3 C38 12 41 12 44 4 C49 12 42 26 26 32 Z"/></svg>
-          <div class="itin-body"><div class="itin-title">Ceremonia civil</div><div class="itin-desc">El momento que hemos esperado, frente al mar.</div></div>
-        </div>
-        <div class="itin-item">
-          <div class="itin-time">5:00 pm</div>
-          <svg class="itin-shell" viewBox="0 0 52 34" fill="currentColor" aria-hidden="true"><path d="M26 32 C10 26 3 12 8 4 C11 12 14 12 15 3 C18 12 21 12 22 2 C24 12 28 12 30 2 C31 12 34 12 37 3 C38 12 41 12 44 4 C49 12 42 26 26 32 Z"/></svg>
-          <div class="itin-body"><div class="itin-title">Brindis y cóctel</div><div class="itin-desc">Celebramos con los pies en la arena.</div></div>
-        </div>
-        <div class="itin-item">
-          <div class="itin-time">6:30 pm</div>
-          <svg class="itin-shell" viewBox="0 0 52 34" fill="currentColor" aria-hidden="true"><path d="M26 32 C10 26 3 12 8 4 C11 12 14 12 15 3 C18 12 21 12 22 2 C24 12 28 12 30 2 C31 12 34 12 37 3 C38 12 41 12 44 4 C49 12 42 26 26 32 Z"/></svg>
-          <div class="itin-body"><div class="itin-title">Cena y fiesta</div><div class="itin-desc">A bailar hasta que baje la marea.</div></div>
-        </div>
-      </div>
+      <figure class="art-figure reveal">
+        <img class="art-img" src="plan.jpg" alt="El plan del día · 4:00 p.m. Ceremonia Civil · 6:00 p.m. Cena · 8:00 p.m. Fiesta · 11:00 p.m. Fin de la celebración" draggable="false">
+        <figcaption class="art-caption">Nos reunimos antes en el muelle a las 3:00 p.m. para zarpar juntos.</figcaption>
+      </figure>
     </div>
   </section>
 
@@ -1671,6 +1607,9 @@ footer { padding: 3rem 1.5rem 2rem; background: var(--wine); color: var(--cream)
         <p class="section-subtitle">La celebración es en Punta de Palma, a la que llegamos todos juntos por lancha. Nos encontramos primero en el muelle.</p>
         <div class="section-divider"></div>
       </div>
+      <figure class="art-figure reveal" style="margin-bottom:1.8rem">
+        <img class="art-img" src="muelle.jpg" alt="8 de Agosto 2026 · 3:00 p.m. · Punto de reunión Muelle Municipal · Allí estarán unas lanchas esperando para que los lleve a Punta de Palma" draggable="false">
+      </figure>
       <div class="location-card reveal">
         <div class="location-name">Muelle Municipal</div>
         <div class="location-address">Punto de encuentro · 3:00 p.m.</div>

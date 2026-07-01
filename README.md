@@ -13,22 +13,22 @@ estructura pero con contenido, paleta (costera/marina) y confirmación propios.
 - **Frontend**: `index.html` (HTML/CSS/JS vanilla, un solo archivo, autocontenido).
 - **Sin backend**: no usa Supabase ni ninguna base de datos.
 - **Confirmación de asistencia**: botón de **WhatsApp** con mensaje pre-escrito.
-- **Assets**: gráficos costeros hechos con SVG/CSS inline (concha, olas). Única imagen
-  externa: `Textura papel.png` (textura neutra de papel para las tarjetas).
+- **Assets**: artes costeros de la invitación (`portada.jpg`, `info.jpg`, `plan.jpg`,
+  `muelle.jpg`) + `Textura papel.png` (textura de las tarjetas). El resto de la decoración
+  (sello de concha, olas) es SVG/CSS inline.
 
 ---
 
 ## 2. Secciones
 
-1. **Portada** · tarjeta costera con sello de concha; toca para abrir.
-2. **Bienvenida** · nombres + mensaje de la boda civil.
-3. **Información del evento** · fecha 8 ago 2026, 4:00 p.m., Punta de Palma.
-4. **Cuenta regresiva** · hacia el 8 de agosto 2026.
-5. **Nuestra historia** · timeline.
-6. **El plan del día** · itinerario (muelle → lancha → ceremonia → cóctel → fiesta).
-7. **Cómo llegar** · Muelle Municipal (punto de reunión) + lanchas a Punta de Palma, Maps/Waze.
-8. **Confirmación** · botón de WhatsApp.
-9. **Solo adultos**, **Dress code de playa**, **Regalos**, **FAQ**, **Cierre**.
+1. **Portada** (`portada.jpg`) · toca el sello de concha para abrir.
+2. **Invitación principal** (`info.jpg`) · nombres, boda civil, 8 ago 2026, Punta de Palma, 4:00 p.m.
+3. **Cuenta regresiva** · hacia el 8 de agosto 2026.
+4. **Nuestra historia** · timeline.
+5. **El plan del día** (`plan.jpg`) · 4:00 ceremonia · 6:00 cena · 8:00 fiesta · 11:00 fin.
+6. **Cómo llegar** (`muelle.jpg`) · Muelle Municipal 3:00 p.m. + lanchas a Punta de Palma, Maps/Waze.
+7. **Confirmación** · botón de WhatsApp.
+8. **Solo adultos**, **Dress code de playa**, **Regalos**, **FAQ**, **Cierre**.
 
 ---
 
@@ -79,6 +79,10 @@ Archivo estático — cualquier host sirve.
 ```
 boda-civil-valeria-apolo/
 ├── index.html          ← la invitación completa (texto, estilos, JS)
+├── portada.jpg         ← arte de portada (sello de concha)
+├── info.jpg            ← tarjeta principal con los datos del evento
+├── plan.jpg            ← "El Plan" (itinerario del día)
+├── muelle.jpg          ← punto de reunión / lanchas
 ├── Textura papel.png   ← textura de papel para tarjetas
 ├── README.md           ← este documento
 └── .gitignore
