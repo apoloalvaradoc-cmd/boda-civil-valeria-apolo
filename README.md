@@ -14,7 +14,6 @@ estructura pero con contenido, paleta (costera/marina) y confirmación propios.
 - **Sin backend**: no usa Supabase ni ninguna base de datos.
 - **Confirmación de asistencia**: botón de **WhatsApp** con mensaje pre-escrito.
 - **Assets**: artes costeros de la invitación (`portada.png`, `info.jpg`, `plan.jpg`,
-  `muelle.png`) + `Textura papel.png` (textura de las tarjetas). El resto de la decoración
   (sello de concha, olas) es SVG/CSS inline.
 
 ---
@@ -83,7 +82,6 @@ boda-civil-valeria-apolo/
 ├── conjunto.png        ← arte completo (primera imagen tras abrir)
 ├── plan.jpg            ← "El Plan" (itinerario del día)
 ├── muelle.png          ← punto de reunión / lanchas
-├── Textura papel.png   ← textura de papel para tarjetas
 ├── README.md           ← este documento
 └── .gitignore
 ```
