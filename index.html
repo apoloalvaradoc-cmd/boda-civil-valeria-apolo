@@ -269,8 +269,8 @@ body.locked { overflow: hidden; }
 .art-figure { max-width: 440px; margin: 0 auto; }
 .art-figure.wide { max-width: 500px; }
 .art-img { width: 100%; border-radius: 12px; box-shadow: 0 16px 40px -14px rgba(46,74,80,0.35); border: 1px solid rgba(184,154,104,0.22); display: block; }
-/* Composite/mockup flotante (fondo blanco): sin marco, solo sombra suave */
-.art-img.plain { border: none; border-radius: 0; box-shadow: 0 20px 44px -20px rgba(46,74,80,0.35); }
+/* Composite/mockup flotante (PNG transparente): sin marco, sombra que sigue la silueta */
+.art-img.plain { border: none; border-radius: 0; box-shadow: none; filter: drop-shadow(0 12px 18px rgba(46,74,80,0.22)); }
 .art-caption { text-align: center; font-family: var(--font-serif); font-style: italic; color: var(--muted); font-size: 0.9rem; margin-top: 0.9rem; }
 
 /* ---------- atmosphere: floating gold motes (sun-flecks on paper) ---------- */
@@ -1536,7 +1536,7 @@ footer { padding: 3rem 1.5rem 2rem; background: var(--wine); color: var(--cream)
   <!-- 1. INVITACIÓN PRINCIPAL · arte con los datos del evento -->
   <section class="intro-art" id="inicio">
     <figure class="art-figure wide reveal">
-      <img class="art-img plain" src="conjunto.jpg" alt="Invitación de boda civil de Valeria & Apolo · 8 de Agosto 2026 · Punta de Palma, Izabal · 4:00 p.m. · Punto de reunión Muelle Municipal, lanchas a Punta de Palma" draggable="false">
+      <img class="art-img plain" src="conjunto.png" alt="Invitación de boda civil de Valeria & Apolo · 8 de Agosto 2026 · Punta de Palma, Izabal · 4:00 p.m. · Punto de reunión Muelle Municipal, lanchas a Punta de Palma" draggable="false">
       <div style="text-align:center;margin-top:1.4rem">
         <button class="hero-rsvp-btn" onclick="scrollTo('rsvp')">Confirmar asistencia</button>
       </div>
