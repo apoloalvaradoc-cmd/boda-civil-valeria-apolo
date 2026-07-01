@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
-<meta name="theme-color" content="#2F6E75">
+<meta name="theme-color" content="#4E8691">
 <title>Valeria & Apolo · Boda Civil · 08.08.2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,27 +14,29 @@
    Burgundy · Rosa · Blush · Olivo · Sage · Crema
 ============================================================ */
 :root {
-  /* PALETA COSTERA · Boda Civil Valeria & Apolo · Punta de Palma */
-  --wine:         #2F6E75;  /* deep teal / turquesa (primary) */
-  --wine-dark:    #1F4E54;  /* darker teal (deepest) */
-  --wine-deep:    #1F4E54;
-  --wine-soft:    #3C818A;
-  --corinto:      #2F6E75;
-  --rose:         #C79A5E;  /* arena / oro (acento cálido) */
-  --rose-powder:  #CBDBD4;  /* verde mar claro */
-  --rose-deep:    #9A7E4C;  /* aliased to olive (eyebrows etc.) */
-  --blush:        #D9E4DE;  /* aqua pálido */
-  --olive:        #9A7E4C;  /* arena dorada (text accents, eyebrows) */
-  --olive-dark:   #7E663B;
-  --olive-deep:   #6A5631;
-  --sage:         #B9CFC8;  /* verde mar (borders, dividers) */
-  --cream:        #F2ECDD;  /* marfil / crema */
-  --cream-light:  #F8F4EA;
-  --cream-dark:   #E7DFCC;
-  --ivory:        #F2ECDD;
-  --ink:          #2B3A3D;  /* gris azulado profundo */
-  --muted:        #7C8A87;
-  --paper-shadow: rgba(31, 78, 84, 0.07);
+  /* PALETA OFICIAL · Boda Civil Valeria & Apolo · Punta de Palma
+     Turquesa petróleo #4E8691 · Azul agua #BFDDE0 · Marfil #F5EFE4
+     Arena #E6D8C5 · Champagne #B89A68 · Perla #F7F3EC · Beige #DCCEB8 */
+  --wine:         #4E8691;  /* turquesa petróleo (primary: nombres, títulos, bordes) */
+  --wine-dark:    #3C6C75;  /* petróleo más oscuro */
+  --wine-deep:    #35616A;
+  --wine-soft:    #5E98A2;
+  --corinto:      #4E8691;
+  --rose:         #B89A68;  /* champagne dorado (acento cálido, ornamentos) */
+  --rose-powder:  #BFDDE0;  /* azul agua suave */
+  --rose-deep:    #B89A68;  /* aliased to olive (eyebrows) → champagne */
+  --blush:        #BFDDE0;  /* azul agua */
+  --olive:        #B89A68;  /* champagne dorado (eyebrows, texto secundario) */
+  --olive-dark:   #9C824F;
+  --olive-deep:   #85703F;
+  --sage:         #BFDDE0;  /* azul agua (bordes, divisores) */
+  --cream:        #F5EFE4;  /* marfil cálido (cards / fondo) */
+  --cream-light:  #F7F3EC;  /* perla */
+  --cream-dark:   #E6D8C5;  /* arena */
+  --ivory:        #F5EFE4;
+  --ink:          #33474C;  /* petróleo profundo (texto principal) */
+  --muted:        #8C8073;  /* gris cálido (texto tenue) */
+  --paper-shadow: rgba(46, 74, 80, 0.07);
   --font-script:  'Italianno', cursive;
   --font-display: 'Pinyon Script', 'Italianno', cursive;
   --font-serif:   'Cormorant Garamond', serif;
@@ -57,8 +59,8 @@
 html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
 body {
   font-family: var(--font-sans);
-  /* Background costero · arena suave */
-  background: #E9E1CF;
+  /* Background costero · marfil cálido */
+  background: #F5EFE4;
   color: var(--ink);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
@@ -70,8 +72,8 @@ body::before {
   content: ''; position: fixed; inset: 0; pointer-events: none; z-index: 1;
   background:
     /* sutiles ambientes warm en blanco */
-    radial-gradient(ellipse 80% 50% at 15% 10%, rgba(240, 250, 250, 0.55), transparent 60%),
-    radial-gradient(ellipse 70% 40% at 85% 90%, rgba(47, 110, 117, 0.06), transparent 60%);
+    radial-gradient(ellipse 80% 50% at 15% 10%, rgba(191, 221, 224, 0.30), transparent 60%),
+    radial-gradient(ellipse 70% 40% at 85% 90%, rgba(78, 134, 145, 0.07), transparent 60%);
 }
 body > * { position: relative; z-index: 2; }
 button { font: inherit; cursor: pointer; border: none; background: none; color: inherit; }
@@ -96,7 +98,7 @@ body.locked { overflow: hidden; }
   --light-x: 35%;
   --light-y: 28%;
 
-  background: linear-gradient(170deg, #DCE9E6 0%, #E9E1CF 55%, #E4D9C4 100%);
+  background: linear-gradient(170deg, #D6E7E9 0%, #F5EFE4 55%, #E6D8C5 100%);
   display: flex; flex-direction: column; align-items: center; justify-content: center;
   padding: 2rem 1.2rem;
   perspective: 1600px;
@@ -174,7 +176,7 @@ body.locked { overflow: hidden; }
   position: absolute;
   inset: 0;
   border-radius: 50%;
-  border: 2px solid rgba(47, 110, 117, 0.5);
+  border: 2px solid rgba(78, 134, 145, 0.5);
   pointer-events: none;
   animation: coverTapRipple 2.6s ease-out infinite;
 }
@@ -1490,12 +1492,12 @@ footer { padding: 3rem 1.5rem 2rem; background: var(--wine); color: var(--cream)
       <span class="cover-tap-pulse" aria-hidden="true"></span>
       <span class="cover-tap-pulse delay" aria-hidden="true"></span>
       <svg class="cover-seal" viewBox="0 0 100 100" aria-hidden="true">
-        <circle cx="50" cy="50" r="46" fill="#2F6E75"/>
-        <circle cx="50" cy="50" r="46" fill="none" stroke="#1F4E54" stroke-width="2.5"/>
-        <circle cx="50" cy="50" r="40" fill="none" stroke="#5A9199" stroke-width="1" opacity="0.6"/>
+        <circle cx="50" cy="50" r="46" fill="#4E8691"/>
+        <circle cx="50" cy="50" r="46" fill="none" stroke="#35616A" stroke-width="2.5"/>
+        <circle cx="50" cy="50" r="40" fill="none" stroke="#7FB0B8" stroke-width="1" opacity="0.6"/>
         <g transform="translate(50 68)">
-          <path d="M0 0 C-24 -7 -32 -28 -22 -33 C-18 -22 -14 -22 -11 -34 C-7 -21 -3 -21 0 -34 C3 -21 7 -21 11 -34 C14 -22 18 -22 22 -33 C32 -28 24 -7 0 0 Z" fill="#F2ECDD" stroke="#D9CBA6" stroke-width="1"/>
-          <g stroke="#C9B78A" stroke-width="1" opacity="0.7" fill="none">
+          <path d="M0 0 C-24 -7 -32 -28 -22 -33 C-18 -22 -14 -22 -11 -34 C-7 -21 -3 -21 0 -34 C3 -21 7 -21 11 -34 C14 -22 18 -22 22 -33 C32 -28 24 -7 0 0 Z" fill="#F7F3EC" stroke="#DCCEB8" stroke-width="1"/>
+          <g stroke="#B89A68" stroke-width="1" opacity="0.7" fill="none">
             <path d="M0 -2 L-16 -28"/><path d="M0 -2 L-8 -31"/><path d="M0 -2 L0 -32"/><path d="M0 -2 L8 -31"/><path d="M0 -2 L16 -28"/>
           </g>
         </g>
