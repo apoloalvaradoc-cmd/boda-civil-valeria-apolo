@@ -23,11 +23,10 @@ estructura pero con contenido, paleta (costera/marina) y confirmación propios.
 1. **Portada** (`portada.png`) · toca el sello de concha para abrir.
 2. **Invitación principal** (`conjunto.png`) · arte completo (sobre + conchas + flores); primera imagen tras la animación.
 3. **Cuenta regresiva** · hacia el 8 de agosto 2026.
-4. **Nuestra historia** · timeline.
-5. **El plan del día** (`plan.jpg`) · 4:00 ceremonia · 6:00 cena · 8:00 fiesta · 11:00 fin.
-6. **Cómo llegar** (`muelle.png`) · Muelle Municipal 3:00 p.m. + lanchas a Punta de Palma, Maps/Waze.
-7. **Confirmación** · botón de WhatsApp.
-8. **Solo adultos**, **Dress code de playa**, **Regalos**, **FAQ**, **Cierre**.
+4. **El plan del día** (`plan.jpg`) · 4:00 ceremonia · 6:00 cena · 8:00 fiesta · 11:00 fin.
+5. **Cómo llegar** (`caracol.png`) · Muelle Municipal 3:00 p.m. + lanchas a Punta de Palma, Maps/Waze.
+6. **Confirmación** · botón de WhatsApp.
+7. **Dress code de playa**, **Regalos**, **FAQ**, **Cierre**.
 
 ---
 
@@ -81,7 +80,7 @@ boda-civil-valeria-apolo/
 ├── portada.png         ← arte de portada (sello de concha)
 ├── conjunto.png        ← arte completo (primera imagen tras abrir)
 ├── plan.jpg            ← "El Plan" (itinerario del día)
-├── muelle.png          ← punto de reunión / lanchas
+├── caracol.png          ← punto de reunión / lanchas
 ├── README.md           ← este documento
 └── .gitignore
 ```

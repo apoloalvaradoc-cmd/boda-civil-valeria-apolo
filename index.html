@@ -103,7 +103,7 @@ body.locked { overflow: hidden; }
   padding: 2rem 1.2rem;
   perspective: 1600px;
   overflow: hidden;
-  transition: opacity 1.1s ease 1.1s, transform 1.1s ease 1.1s, visibility 0s linear 2.3s;
+  transition: opacity 0.55s ease 0.2s, transform 0.55s ease 0.2s, visibility 0s linear 0.85s;
 }
 /* very subtle warm vignette around edges (cream-on-cream depth) */
 #cover::before {
@@ -1554,43 +1554,6 @@ footer { padding: 3rem 1.5rem 2rem; background: var(--wine); color: var(--cream)
     </div>
   </section>
 
-  <!-- NUESTRA HISTORIA -->
-  <section class="section" id="historia">
-    <div class="section-inner">
-      <div class="section-title-block reveal">
-        <div class="section-eyebrow">Nuestra historia</div>
-        <h2 class="section-title">Cómo llegamos aquí</h2>
-        <div class="section-divider"></div>
-      </div>
-      <div class="story-timeline reveal">
-        <div class="story-item">
-          <div class="story-dot"></div>
-          <div class="story-year">2019 · el inicio</div>
-          <h3 class="story-title">Nos conocimos</h3>
-          <p class="story-text">Un 7 de abril se cruzaron nuestras miradas por primera vez. Fue un hola distinto, uno de esos que te dejan pensando todo el día siguiente.</p>
-        </div>
-        <div class="story-item">
-          <div class="story-dot"></div>
-          <div class="story-year">2020–2024 · construyendo</div>
-          <h3 class="story-title">Nuestro camino</h3>
-          <p class="story-text">Viajes, atardeceres frente al mar, risas, pruebas y victorias. Descubrimos que juntos éramos mejor versión de nosotros mismos.</p>
-        </div>
-        <div class="story-item">
-          <div class="story-dot"></div>
-          <div class="story-year">la pregunta</div>
-          <h3 class="story-title">La propuesta</h3>
-          <p class="story-text">Con un "¿te casarías conmigo?" temblando más que las manos, ella dijo que sí. Desde ese momento empezamos a soñar con este día.</p>
-        </div>
-        <div class="story-item">
-          <div class="story-dot"></div>
-          <div class="story-year">08 · Ago · 2026 · hoy</div>
-          <h3 class="story-title">Sí, acepto</h3>
-          <p class="story-text">Nuestra boda civil frente al mar. Queremos que seas parte de este capítulo tan esperado. Gracias por acompañarnos a celebrar el amor.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- ITINERARIO · el plan del día (arte) -->
   <section class="itinerario-art" id="itinerario">
     <div class="itinerario-inner">
@@ -1611,7 +1574,7 @@ footer { padding: 3rem 1.5rem 2rem; background: var(--wine); color: var(--cream)
         <div class="section-divider"></div>
       </div>
       <figure class="art-figure reveal" style="margin-bottom:1.8rem">
-        <img class="art-img plain" src="muelle.png" alt="8 de Agosto 2026 · 3:00 p.m. · Punto de reunión Muelle Municipal · Allí estarán unas lanchas esperando para que los lleve a Punta de Palma" draggable="false">
+        <img class="art-img plain" src="caracol.png" alt="Valeria & Apolo · Boda Civil · 8 de Agosto 2026 · Punta de Palma, Izabal · 4:00 p.m." draggable="false">
       </figure>
       <div class="location-card reveal">
         <div class="location-name">Muelle Municipal</div>
@@ -1651,19 +1614,6 @@ footer { padding: 3rem 1.5rem 2rem; background: var(--wine); color: var(--cream)
     </div>
   </section>
 
-  <!-- ADULTS ONLY -->
-  <section id="adults">
-    <div class="section-inner">
-      <div class="adults-card reveal">
-        <div class="adults-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" style="margin:0 auto"><path d="M12 3l1.8 5.5h5.7l-4.6 3.4 1.8 5.6L12 14l-4.7 3.5 1.8-5.6L4.5 8.5h5.7z"/></svg>
-        </div>
-        <p class="adults-text">Con mucho cariño, hemos decidido celebrar este día en un ambiente solo para adultos.</p>
-        <p class="adults-sub">Agradecemos tu comprensión</p>
-      </div>
-    </div>
-  </section>
-
   <!-- DRESS CODE -->
   <section class="section" id="dresscode">
     <div class="section-inner">
@@ -1675,16 +1625,8 @@ footer { padding: 3rem 1.5rem 2rem; background: var(--wine); color: var(--cream)
       </div>
       <div class="dress-grid reveal">
         <div class="dress-card">
-          <div class="dress-heading">Tonalidades sugeridas</div>
-          <div class="dress-swatches">
-            <div class="swatch"><span class="swatch-dot" style="background:#E7DCC4"></span><span class="swatch-label">Arena</span></div>
-            <div class="swatch"><span class="swatch-dot" style="background:#8FC3C4"></span><span class="swatch-label">Turquesa</span></div>
-            <div class="swatch"><span class="swatch-dot" style="background:#B9CFC8"></span><span class="swatch-label">Verde mar</span></div>
-            <div class="swatch"><span class="swatch-dot" style="background:#E7A98C"></span><span class="swatch-label">Coral suave</span></div>
-            <div class="swatch"><span class="swatch-dot" style="background:#9FB8D4"></span><span class="swatch-label">Azul cielo</span></div>
-            <div class="swatch"><span class="swatch-dot" style="background:#C7B99C"></span><span class="swatch-label">Lino</span></div>
-          </div>
-          <p class="dress-note">Fresco, ligero y elegante. Tonos claros y del mar funcionan perfecto para el atardecer.</p>
+          <div class="dress-heading">La idea</div>
+          <p class="dress-note">Fresco, ligero y elegante. Telas frescas y tonos claros o del mar funcionan perfecto para una celebración al atardecer, con los pies en la arena.</p>
         </div>
         <div class="dress-card forbidden">
           <div class="dress-heading">Por favor evita</div>
@@ -1750,10 +1692,6 @@ footer { padding: 3rem 1.5rem 2rem; background: var(--wine); color: var(--cream)
         <details class="faq-item">
           <summary>¿Qué me pongo?</summary>
           <p>Formal de playa: telas frescas y colores del mar. La ceremonia es sobre la arena, así que te recomendamos sandalias o calzado cómodo y evitar tacón de aguja.</p>
-        </details>
-        <details class="faq-item">
-          <summary>¿Puedo llevar niños?</summary>
-          <p>Con mucho cariño, hemos decidido que sea una celebración solo para adultos. Agradecemos tu comprensión.</p>
         </details>
         <details class="faq-item">
           <summary>¿Qué llevo conmigo?</summary>
@@ -1830,7 +1768,7 @@ function openEnvelope() {
     $('#invitation').setAttribute('aria-hidden', 'false');
     $('#nav').classList.add('visible');
     observeReveal();
-  }, 1100);
+  }, 450);
 }
 $('#envelope').addEventListener('click', openEnvelope);
 $('#envelope').addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openEnvelope(); } });
