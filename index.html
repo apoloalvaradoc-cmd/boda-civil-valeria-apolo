@@ -1042,6 +1042,8 @@ body.locked { overflow: hidden; }
 .location-address { margin-top: 0.5rem; color: var(--ink); font-size: 0.95rem; }
 .location-note { margin-top: 1.2rem; font-style: italic; color: var(--muted); font-size: 0.85rem; }
 .location-actions { margin-top: 2rem; display: flex; gap: 0.8rem; justify-content: center; flex-wrap: wrap; }
+.map-embed { max-width: 560px; margin: 1.8rem auto 0; aspect-ratio: 4 / 3; border-radius: 10px; overflow: hidden; border: 1px solid var(--sage); box-shadow: 0 10px 26px -14px rgba(46,74,80,0.35); background: var(--cream-light); }
+.map-embed iframe { width: 100%; height: 100%; border: 0; display: block; }
 
 .btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.85rem 1.5rem; font-size: 0.7rem; letter-spacing: 0.25em; text-transform: uppercase; transition: all 0.25s ease; border-radius: 1px; }
 .btn-outline { border: 1px solid var(--wine); color: var(--wine); background: transparent; }
@@ -1592,6 +1594,9 @@ footer { padding: 3rem 1.5rem 2rem; background: var(--wine); color: var(--cream)
           </a>
         </div>
       </div>
+      <div class="map-embed reveal">
+        <iframe src="https://embed.waze.com/iframe?zoom=16&lat=15.732710&lon=-88.605202&ct=livemap" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" title="Mapa de Marina Marimar"></iframe>
+      </div>
     </div>
   </section>
 
@@ -1647,6 +1652,10 @@ footer { padding: 3rem 1.5rem 2rem; background: var(--wine); color: var(--cream)
         <a class="playlist-spotify-btn whatsapp-btn" id="whatsapp-link" href="#" target="_blank" rel="noreferrer">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2Zm5.8 14.02c-.24.68-1.42 1.32-1.95 1.36-.5.05-1.13.24-3.66-.77-3.08-1.22-5.04-4.36-5.19-4.56-.15-.2-1.24-1.65-1.24-3.15 0-1.5.79-2.24 1.07-2.54.28-.31.61-.38.81-.38.2 0 .41 0 .58.01.19.01.44-.07.68.53.24.6.83 2.08.9 2.23.07.15.12.33.02.53-.1.2-.15.33-.3.5-.15.18-.32.4-.45.53-.15.15-.31.32-.13.62.18.3.79 1.3 1.69 2.11 1.17 1.04 2.15 1.36 2.46 1.51.3.15.48.13.65-.08.18-.2.75-.87.95-1.17.2-.3.4-.25.68-.15.28.1 1.76.83 2.06.98.3.15.5.22.58.35.07.13.07.73-.17 1.41Z"/></svg>
           Confirmar por WhatsApp
+        </a>
+        <a class="playlist-spotify-btn form-btn" id="form-link" href="#" target="_blank" rel="noreferrer" style="display:none; margin-top:0.9rem">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M9 12h6M9 16h6"/></svg>
+          Confirmar por formulario
         </a>
         <div class="playlist-note">Se abre WhatsApp con el mensaje listo</div>
       </div>
@@ -1776,6 +1785,8 @@ const CONFIG = {
   // Número de WhatsApp para confirmar (formato internacional, solo dígitos: 502 + número)
   whatsappNumber: "50258581601",
   whatsappMessage: "Hola Valeria y Apolo 👋 Confirmo mi asistencia a su boda civil del 8 de agosto en Punta de Palma. Vamos ___ persona(s).",
+  // Link del Google Form (pegar la URL pública del formulario para activar el botón)
+  googleFormUrl: "",
 };
 
 const $  = (s) => document.querySelector(s);
@@ -1791,6 +1802,15 @@ function scrollTo(id) { const el = document.getElementById(id); if (el) el.scrol
   if (!link) return;
   const num = (CONFIG.whatsappNumber || '').replace(/[^\d]/g, '');
   link.href = 'https://wa.me/' + num + '?text=' + encodeURIComponent(CONFIG.whatsappMessage || '');
+})();
+
+/* ============================================================
+   GOOGLE FORM · muestra el botón solo si hay URL configurada
+============================================================ */
+(function setupForm() {
+  const link = $('#form-link');
+  if (!link) return;
+  if (CONFIG.googleFormUrl) { link.href = CONFIG.googleFormUrl; link.style.display = 'inline-flex'; }
 })();
 
 /* ============================================================
