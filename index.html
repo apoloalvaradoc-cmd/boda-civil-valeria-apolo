@@ -776,23 +776,9 @@ body.locked { overflow: hidden; }
 .ornament-divider .mark { color: var(--wine); font-family: var(--font-serif); font-style: italic; font-size: 1.2rem; }
 
 /* ============================================================
-   ORDEN DE SECCIONES (flex order overrides el orden del HTML)
+   ORDEN DE SECCIONES · sigue el orden del HTML (sin flex order)
 ============================================================ */
 #invitation { display: flex; flex-direction: column; }
-#invitation > .intro-art { order: 1; }
-#invitation > #evento     { order: 2; }
-#invitation > #countdown  { order: 3; }
-#invitation > #rsvp       { order: 4; }
-#invitation > #itinerario { order: 5; }
-#invitation > #location   { order: 6; }
-#invitation > #dresscode  { order: 7; }
-#invitation > #adults     { order: 8; }
-#invitation > #historia   { order: 9; }
-#invitation > #playlist   { order: 10; }
-#invitation > #gifts      { order: 11; }
-#invitation > #faq        { order: 12; }
-#invitation > #closing-cta{ order: 13; }
-#invitation > footer      { order: 99; }
 
 /* ============================================================
    FAQ · accordion preguntas frecuentes
@@ -1780,7 +1766,7 @@ footer { padding: 3rem 1.5rem 2rem; background: var(--wine); color: var(--cream)
 const CONFIG = {
   brideName: "Valeria",
   groomName: "Apolo",
-  weddingDateISO: "2026-08-08T16:00:00-06:00",
+  weddingDateISO: "2026-08-08T15:00:00-06:00",
   bankAccount: "1591672",
   // Número de WhatsApp para confirmar (formato internacional, solo dígitos: 502 + número)
   whatsappNumber: "50258581601",
