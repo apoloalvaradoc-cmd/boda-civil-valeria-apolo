@@ -25,8 +25,9 @@ estructura pero con contenido, paleta (costera/marina) y confirmación propios.
 3. **Cuenta regresiva** · hacia el 8 de agosto 2026.
 4. **El plan del día** (`plan.jpg`) · 4:00 ceremonia · 6:00 cena · 8:00 fiesta · 11:00 fin.
 5. **Cómo llegar** (`marina.png`) · Marina Marimar 3:00 p.m. + lanchas a Punta de Palma, Maps/Waze.
-6. **Confirmación** · botón de WhatsApp.
-7. **Dress code de playa**, **Regalos**, **FAQ**, **Cierre**.
+6. **Hospedaje** · Mar Brisa, Amatique Bay, Puerto Libre (con enlaces a Maps).
+7. **Confirmación** · botón de WhatsApp.
+8. **Dress code de playa**, **Regalos**, **FAQ**, **Cierre**.
 
 ---
 
