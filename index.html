@@ -702,8 +702,8 @@ body.locked { overflow: hidden; }
 @keyframes ctaPulse { 0%, 100% { opacity: 0.65; } 50% { opacity: 1; } }
 #cover.opening .cover-cta { opacity: 0; transition: opacity 0.3s ease; }
 
-/* opening cover: keep stage visible through the whole sequence, then fade cover */
-#cover.opening { transition: opacity 1s ease 3s, visibility 0s linear 4s; }
+/* opening cover: fade rápido, sin esperas largas */
+#cover.opening { transition: opacity 0.4s ease, visibility 0s linear 0.4s; }
 #cover.opening .paper-stage {
   /* lift gently then settle (no zoom-out — that broke continuity) */
   animation: stageLift 3.4s cubic-bezier(0.4, 0, 0.4, 1) 0.4s forwards;
@@ -758,7 +758,7 @@ body.locked { overflow: hidden; }
 /* ============================================================
    INVITATION
 ============================================================ */
-#invitation { opacity: 0; transition: opacity 1.2s ease 1.8s; }
+#invitation { opacity: 0; transition: opacity 0.4s ease; }
 #invitation.visible { opacity: 1; }
 .section { width: 100%; padding: 4rem 1.5rem; }
 .section-inner { max-width: 680px; margin: 0 auto; }
@@ -1306,7 +1306,7 @@ footer { padding: 3rem 1.5rem 2rem; background: var(--wine); color: var(--cream)
 /* (Cover styles consolidated above into the tactile-paper block) */
 
 /* Hero names reveal: script slides in */
-#invitation { transition: opacity 1.4s ease 1.6s; }
+#invitation { transition: opacity 0.4s ease; }
 .hero-names { animation: none; }
 #invitation.visible .hero-names { animation: scriptReveal 1.4s var(--ease-soft) both; }
 #invitation.visible .hero-names:nth-of-type(2) { animation-delay: 0.25s; }
@@ -1833,7 +1833,7 @@ function openEnvelope() {
     $('#invitation').setAttribute('aria-hidden', 'false');
     $('#nav').classList.add('visible');
     observeReveal();
-  }, 450);
+  }, 150);
 }
 $('#envelope').addEventListener('click', openEnvelope);
 $('#envelope').addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openEnvelope(); } });
