@@ -998,9 +998,6 @@ body.locked { overflow: hidden; }
 
 .hero-rsvp-btn { margin-top: 2.6rem; display: inline-block; padding: 1.1rem 2.6rem; background: var(--wine); color: var(--cream); font-size: 0.85rem; letter-spacing: 0.3em; text-transform: uppercase; transition: all 0.3s ease; border: 1px solid var(--wine); font-weight: 500; }
 .hero-rsvp-btn:hover { background: var(--wine-dark); transform: translateY(-2px); box-shadow: 0 8px 16px rgba(69, 16, 28, 0.3); }
-.closing-form-line { margin-top: 1.1rem; }
-.closing-form-line a { font-family: var(--font-serif); font-style: italic; font-size: 0.95rem; color: var(--wine); border-bottom: 1px solid var(--sage); padding-bottom: 2px; transition: color 0.2s ease; }
-.closing-form-line a:hover { color: var(--olive); }
 
 .scroll-hint { margin-top: 3rem; font-size: 0.62rem; letter-spacing: 0.35em; text-transform: uppercase; color: var(--muted); text-align: center; display: flex; flex-direction: column; align-items: center; gap: 0.4rem; }
 .scroll-hint svg { animation: bounce 1.8s ease-in-out infinite; }
@@ -1530,9 +1527,9 @@ footer { padding: 3rem 1.5rem 2rem; background: var(--wine); color: var(--cream)
   <a href="#itinerario" data-nav>El plan</a>
   <a href="#rsvp" data-nav>Confirmar asistencia</a>
   <a href="#location" data-nav>Ubicación</a>
-  <a href="#hospedaje" data-nav>Hospedaje</a>
   <a href="#dresscode" data-nav>Dress code</a>
   <a href="#gifts" data-nav>Regalos</a>
+  <a href="#hospedaje" data-nav>Hospedaje</a>
 </div>
 
 <!-- ================= INVITATION ================= -->
@@ -1759,8 +1756,7 @@ footer { padding: 3rem 1.5rem 2rem; background: var(--wine); color: var(--cream)
         <div class="closing-eyebrow">Te esperamos</div>
         <h2 class="closing-title">Tu confirmación nos importa</h2>
         <p class="closing-message">Tu respuesta nos ayuda a cuidar cada detalle del día. Si aún no has confirmado, este es el momento.</p>
-        <button class="hero-rsvp-btn" onclick="scrollTo('rsvp')">Confirma tu asistencia</button>
-        <div class="closing-form-line"><a id="closing-form-link" href="#" target="_blank" rel="noreferrer" style="display:none">o confirma directo en el formulario</a></div>
+        <a class="hero-rsvp-btn" id="closing-form-btn" href="#rsvp" rel="noreferrer">Confirma tu asistencia</a>
       </div>
     </div>
   </section>
@@ -1815,8 +1811,9 @@ function scrollTo(id) { const el = document.getElementById(id); if (el) el.scrol
   if (!CONFIG.googleFormUrl) return;
   const btn = $('#form-link');
   if (btn) { btn.href = CONFIG.googleFormUrl; btn.style.display = 'inline-flex'; }
-  const closing = $('#closing-form-link');
-  if (closing) { closing.href = CONFIG.googleFormUrl; closing.style.display = 'inline-block'; }
+  // Botón final "Confirma tu asistencia" → redirige directo al formulario
+  const closingBtn = $('#closing-form-btn');
+  if (closingBtn) { closingBtn.href = CONFIG.googleFormUrl; closingBtn.target = '_blank'; }
 })();
 
 /* ============================================================
