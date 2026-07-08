@@ -24,7 +24,7 @@ estructura pero con contenido, paleta (costera/marina) y confirmación propios.
 2. **Invitación principal** (`conjunto.png`) · arte completo (sobre + conchas + flores); primera imagen tras la animación.
 3. **Cuenta regresiva** · hacia el 8 de agosto 2026.
 4. **El plan del día** (`plan.jpg`) · 4:00 ceremonia · 6:00 cena · 8:00 fiesta · 11:00 fin.
-5. **Cómo llegar** (`caracol.png`) · Muelle Municipal 3:00 p.m. + lanchas a Punta de Palma, Maps/Waze.
+5. **Cómo llegar** (`marina.png`) · Marina Marimar 3:00 p.m. + lanchas a Punta de Palma, Maps/Waze.
 6. **Confirmación** · botón de WhatsApp.
 7. **Dress code de playa**, **Regalos**, **FAQ**, **Cierre**.
 
@@ -47,7 +47,7 @@ const CONFIG = {
 
 ### Pendientes antes de publicar
 - [ ] Poner el **número de WhatsApp** real en `CONFIG.whatsappNumber`.
-- [ ] Revisar/afinar los links de **Google Maps / Waze** del Muelle Municipal (sección `location`).
+- [ ] Revisar/afinar los links de **Google Maps / Waze** del Marina Marimar (sección `location`).
 - [ ] (Opcional) Reemplazar los medallones SVG por **fotos reales** de la pareja.
 - [ ] Confirmar horarios del **itinerario** y datos de **regalos**.
 
@@ -80,7 +80,7 @@ boda-civil-valeria-apolo/
 ├── portada.png         ← arte de portada (sello de concha)
 ├── conjunto.png        ← arte completo (primera imagen tras abrir)
 ├── plan.jpg            ← "El Plan" (itinerario del día)
-├── caracol.png          ← punto de reunión / lanchas
+├── marina.png          ← punto de reunión / lanchas
 ├── README.md           ← este documento
 └── .gitignore
 ```
